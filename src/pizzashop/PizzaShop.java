@@ -17,9 +17,8 @@ import java.util.Scanner;
  */
 public class PizzaShop {
 
-   public static PizzaCutter pizzaCutter = new PizzaCutter();//we only ever want one 
-   // of these. The pizza shop takes consistency very seriously
-   //and all pizzas must be cut by the same cutter.
+   public static PizzaCutter pizzaCutter = new PizzaCutter();
+
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);

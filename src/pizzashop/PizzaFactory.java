@@ -5,6 +5,9 @@
  */
 package pizzashop;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * A class that creates different kinds of pizzas
  * depending on their type.
@@ -15,22 +18,17 @@ package pizzashop;
  */
 class PizzaFactory 
 {
-    /**
-     * returns a concrete pizza object
-     * @param type the type of pizza to return
-     * @return 
-     */
-    public Pizza createPizza(String type)
-    {
-        Pizza pizza = null;
-        if(type.equals("cheese"))
-        {
-            pizza = new CheesePizza();
-        }
-        else if (type.equals("pepperoni"))
-        {
-                pizza = new PepperoniPizza();
-        }
-        return pizza;
+    private final List<String> toppings = new ArrayList<>();
+
+    public void addTopping(String topping) {
+        toppings.add(topping);
+    }
+
+    public List<String> getToppings() {
+        return toppings;
+    }
+
+    Pizza createPizza(String type) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

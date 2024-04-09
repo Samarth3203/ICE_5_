@@ -6,6 +6,7 @@
 package pizzashop;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A class that represents a basic pizza
@@ -13,21 +14,14 @@ import java.util.ArrayList;
  */
 public class Pizza 
 {
-    public int bakeTemp = 100;//temp to bake at
-    private ArrayList<String> ingredients = new ArrayList();
-    public void bake(int temp)
-    {
-        bakeTemp = temp;
-        //do some baking here, code not implemented yet
-        //not necessary for the review
+    private final List<String> toppings = new ArrayList<>();
+    int bakeTemp;
+
+    public void addTopping(String topping) {
+        toppings.add(topping);
     }
-    /**
-     *  A method to add toppings to the ingredients
-     * list
-     * @param topping 
-     */
-    public void addTopping(String topping)
-    {
-        ingredients.add(topping);
+
+    public List<String> getToppings() {
+        return toppings;
     }
 }
